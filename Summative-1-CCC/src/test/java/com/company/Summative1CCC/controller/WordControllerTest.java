@@ -45,7 +45,7 @@ public class WordControllerTest {
         String outputJson = mapper.writeValueAsString(testDefinition);
 
         // ACT
-        mockMvc.perform(get("/word/{id}"))
+        mockMvc.perform(get("/word"))
                 .andDo(print())
                 .andExpect(status().isOk())
                 // ASSERT
