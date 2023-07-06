@@ -12,8 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+@RestController
 public class WordController {
-    private List<Definition> wordList;
+    private List<Definition> wordList = new ArrayList<>();
 
     private static int idCounter = 1;
 
@@ -32,11 +33,10 @@ public class WordController {
     }
 
     // provide random word of the day
-    @RequestMapping(value="/word", method = RequestMethod.GET)
+    @RequestMapping(value= "/word", method = RequestMethod.GET)
     @ResponseStatus(value=HttpStatus.OK)
     public Definition randomWord(){
         Random random = new Random();
-
 
         int index = random.nextInt(wordList.size()) + 1;
 
