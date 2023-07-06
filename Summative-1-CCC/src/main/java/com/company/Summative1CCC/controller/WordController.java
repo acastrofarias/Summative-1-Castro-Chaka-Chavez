@@ -38,7 +38,7 @@ public class WordController {
         Random random = new Random();
 
 
-        int index = random.nextInt(1 + wordList.size()) + 1;
+        int index = random.nextInt(wordList.size()) + 1;
 
         return wordList.get(index);
     }
