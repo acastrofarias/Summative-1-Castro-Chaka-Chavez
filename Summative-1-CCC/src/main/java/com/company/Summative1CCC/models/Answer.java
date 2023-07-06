@@ -1,6 +1,14 @@
 package com.company.Summative1CCC.models;
 
 public class Answer {
+
+    public Answer(){}
+
+    public Answer(String answer, int id){
+        this.answer = answer;
+        this.id = id;
+    }
+
     private int id;
 
     public int getId() {
