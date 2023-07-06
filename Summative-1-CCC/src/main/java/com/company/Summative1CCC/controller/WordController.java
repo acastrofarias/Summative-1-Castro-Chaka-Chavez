@@ -7,7 +7,7 @@ import com.company.Summative1CCC.models.Answer;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class WordController {
 
     public WordController(){
         wordList.add(new Definition("Cosher", "To treat with special kindess", idCounter++));
-        wordList.add(new Definition(("Logophile", "A lover of words", idCounter++)));
+        wordList.add(new Definition("Logophile", "A lover of words", idCounter++));
         wordList.add(new Definition("Ferhoodle", "To confuse or mix up", idCounter++));
         wordList.add(new Definition("Proceleusmatic", "Inciting or inspiring", idCounter++));
         wordList.add(new Definition("Skrik", "A sudden fright", idCounter++));
