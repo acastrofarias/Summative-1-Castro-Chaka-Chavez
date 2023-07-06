@@ -37,6 +37,7 @@ public class QuoteController
     }
 //route to get random quote
     @RequestMapping(value= "/quote" ,method = RequestMethod.GET)
+    @ResponseStatus(value=HttpStatus.OK)
     public Quote getRandomQuote(){
         Random random = new Random();
 

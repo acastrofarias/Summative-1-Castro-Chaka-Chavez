@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class WordController {
     private List<Definition> wordList;
@@ -30,5 +31,16 @@ public class WordController {
         
     }
 
+    // provide random word of the day
+    @RequestMapping(value="/word", method = RequestMethod.GET)
+    @ResponseStatus(value=HttpStatus.OK)
+    public Definition randomWord(){
+        Random random = new Random();
+
+
+        int index = random.nextInt(1 + wordList.size()) + 1;
+
+        return wordList.get(index);
+    }
 
 }
