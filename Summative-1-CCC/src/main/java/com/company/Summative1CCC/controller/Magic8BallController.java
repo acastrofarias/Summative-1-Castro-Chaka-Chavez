@@ -26,9 +26,9 @@ public class Magic8BallController {
         answerList.add(new Answer("My sources say no", idCounter++));
     }
 
-    //route to return Magic8Ball Answer
-    //http method: POST
-    //uri: /magic
+    // route to return Magic8Ball Answer
+    // http method: POST
+    // uri: /magic
     @RequestMapping(value = "/magic", method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.CREATED)
     public Answer magic8BallService(@RequestBody String question){

@@ -36,7 +36,9 @@ public class QuoteController
 
 
     }
-//route to get random quote
+    // route to get random quote
+    // http method: GET
+    // uri: /quote
     @RequestMapping(value= "/quote" ,method = RequestMethod.GET)
     @ResponseStatus(value=HttpStatus.OK)
     public Quote getRandomQuote(){
